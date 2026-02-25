@@ -21,6 +21,9 @@ def raizCuadrada(a):
         print("ERROR: NO SE PUEDE CALCULAR LA RAIZ DE UN NUMERO NEGATIVO")
     else:
         return a ** 0.5
+    
+def porcentaje(a,b):
+    return (a * b) / 100
 
 def modulo(a,b):
     if b == 0:
@@ -43,8 +46,9 @@ def calculadora():
     print("4-DIVISION")
     print("5-POTENCIA")
     print("6-RAIZ CUADRADA")
-    print("7-MODULO")
-    print("8-PROMEDIO")
+    print("7-PORCENTAJE")
+    print("8-MODULO")
+    print("9-PROMEDIO")
 
 
     while True:
@@ -142,7 +146,23 @@ def calculadora():
             print(f"EL RESULTADO DE LA RAIZ CUADRADA ES: {resultado}")
             break
 
+
     elif opcion == 7:
+
+        while True:
+
+            try:
+                num1 = int(input("INGRESA EL PRIMER NÚMERO: "))
+                num2 = int(input("INGRESA EL SEGUNDO NÚMERO: "))
+            except ValueError:
+                print("VALOR NO VALIDO")
+                continue
+
+            resultado = porcentaje(num1, num2)
+            print(f"EL RESULTADO DEL PORCENTAJE ES: {resultado}")
+            break
+
+    elif opcion == 8:
 
         while True:   
 
@@ -157,7 +177,7 @@ def calculadora():
             print(f"EL RESULTADO DEL MODULO ES: {resultado}")
             break
 
-    elif opcion == 8:
+    elif opcion == 9:
             
         while True:    
 
