@@ -125,7 +125,7 @@ def calculadora():
             print("VALOR NO VALIDO")
         
         resultado = promedio(listaNumeros)
-        print(f"EL RESULTADO DEL PROMEDIO ES: {resultado}")
+        print(f"EL RESULTADO DEL PROMEDIO ES : {resultado}")
 
         
 calculadora()
