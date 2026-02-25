@@ -46,86 +46,132 @@ def calculadora():
     print("7-MODULO")
     print("8-PROMEDIO")
 
-    try:
-        opcion = int(input("ESCRIBA EL NÚMERO DE LA OPERACIÓN QUE DESEA REALIZAR: "))
-    except ValueError:
-        print("OPCIÓN NO VALIDA")
 
+    while True:
+        try:
+            opcion = int(input("ESCRIBA EL NÚMERO DE LA OPERACIÓN QUE DESEA REALIZAR: "))
+            break
+        except ValueError:
+            print("OPCIÓN NO VALIDA")
+            continue
 
     if opcion == 1:
 
-        try:
-            num1 = float(input("INGRESA EL PRIMER NÚMERO: "))
-            num2 = float(input("INGRESA EL SEGUNDO NÚMERO: "))
-        except ValueError:
-            print("VALOR NO VALIDO")
+        while True:
+            try:
+                num1 = int(input("INGRESA EL PRIMER NÚMERO: "))
+                num2 = int(input("INGRESA EL SEGUNDO NÚMERO: "))
+            except ValueError:
+                print("VALOR NO VALIDO")
+                continue
 
-        resultado = suma(num1, num2)
-        print(f"EL RESULTADO DE LA SUMA ES: {resultado}")
+            resultado = suma(num1, num2)
+            print(f"EL RESULTADO DE LA SUMA ES: {resultado}")
+            break
     
     elif opcion == 2:
-        try:
-            num1 = float(input("INGRESA EL PRIMER NÚMERO: "))
-            num2 = float(input("INGRESA EL SEGUNDO NÚMERO: "))
-        except ValueError:
-            print("VALOR NO VALIDO")
+        
+        while True:
 
-        resultado = resta(num1, num2)
-        print(f"EL RESULTADO DE LA RESTA ES: {resultado}")
+            try:
+                num1 = int(input("INGRESA EL PRIMER NÚMERO: "))
+                num2 = int(input("INGRESA EL SEGUNDO NÚMERO: "))
+            except ValueError:
+                print("VALOR NO VALIDO")
+                continue
+
+            resultado = resta(num1, num2)
+            print(f"EL RESULTADO DE LA RESTA ES: {resultado}")
+            break
 
     elif opcion == 3:
-        try:
-            num1 = float(input("INGRESA EL PRIMER NÚMERO: "))
-            num2 = float(input("INGRESA EL SEGUNDO NÚMERO: "))
-        except ValueError:
-            print("VALOR NO VALIDO")
-        resultado = multiplicacion(num1, num2)
-        print(f"EL RESULTADO DE LA MULTIPLICACION ES: {resultado}")
+        
+        while True:
+
+            try:
+                num1 = int(input("INGRESA EL PRIMER NÚMERO: "))
+                num2 = int(input("INGRESA EL SEGUNDO NÚMERO: "))
+            except ValueError:
+                print("VALOR NO VALIDO")
+                continue
+
+            resultado = multiplicacion(num1, num2)
+            print(f"EL RESULTADO DE LA MULTIPLICACION ES: {resultado}")
+            break
     
     elif opcion == 4:
-        try:
-            num1 = float(input("INGRESA EL PRIMER NÚMERO: "))
-            num2 = float(input("INGRESA EL SEGUNDO NÚMERO: "))
-        except ValueError:
-            print("VALOR NO VALIDO")
-        resultado = division(num1, num2)
-        print(f"EL RESULTADO DE LA DIVISION ES: {resultado}")
+        while True:
+
+            try:
+                num1 = int(input("INGRESA EL PRIMER NÚMERO: "))
+                num2 = int(input("INGRESA EL SEGUNDO NÚMERO: "))
+            except ValueError:
+                print("VALOR NO VALIDO")
+                continue
+
+            resultado = division(num1, num2)
+            print(f"EL RESULTADO DE LA DIVISION ES: {resultado}")
+            break
 
     elif opcion == 5:
-        try:
-            num1 = float(input("INGRESA EL PRIMER NÚMERO: "))
-            num2 = float(input("INGRESA EL SEGUNDO NÚMERO: "))
-        except ValueError:
-            print("VALOR NO VALIDO")
-        resultado = potencia(num1, num2)
-        print(f"EL RESULTADO DE LA POTENCIA ES: {resultado}")
+        
+        while True:
+
+            try:
+                num1 = int(input("INGRESA EL PRIMER NÚMERO: "))
+                num2 = int(input("INGRESA EL SEGUNDO NÚMERO: "))
+            except ValueError:
+                print("VALOR NO VALIDO")
+                continue
+
+            resultado = potencia(num1, num2)
+            print(f"EL RESULTADO DE LA POTENCIA ES: {resultado}")
+            break
     
     elif opcion == 6:
-        try:
-            num1 = float(input("INGRESA EL PRIMER NÚMERO: "))
-        except ValueError:
-            print("VALOR NO VALIDO")
-        resultado = raizCuadrada(num1)
-        print(f"EL RESULTADO DE LA RAIZ CUADRADA ES: {resultado}")
+
+        while True:
+
+            try:
+                num1 = int(input("INGRESA EL PRIMER NÚMERO: "))
+            except ValueError:
+                print("VALOR NO VALIDO")
+                continue
+
+            resultado = raizCuadrada(num1)
+            print(f"EL RESULTADO DE LA RAIZ CUADRADA ES: {resultado}")
+            break
 
     elif opcion == 7:
-        try:
-            num1 = float(input("INGRESA EL PRIMER NÚMERO: "))
-            num2 = float(input("INGRESA EL SEGUNDO NÚMERO: "))
-        except ValueError:
-            print("VALOR NO VALIDO")
-        resultado = modulo(num1, num2)
-        print(f"EL RESULTADO DEL MODULO ES: {resultado}")
+
+        while True:   
+
+            try:
+                num1 = int(input("INGRESA EL PRIMER NÚMERO: "))
+                num2 = int(input("INGRESA EL SEGUNDO NÚMERO: "))
+            except ValueError:
+                print("VALOR NO VALIDO")
+                continue
+
+            resultado = modulo(num1, num2)
+            print(f"EL RESULTADO DEL MODULO ES: {resultado}")
+            break
 
     elif opcion == 8:
-        try:
-            numeros = input("INGRESA LOS NÚMEROS SEPARADOS POR COMAS: ")
-            listaNumeros = [float(num) for num in numeros.split(",")]
-        except ValueError:
-            print("VALOR NO VALIDO")
-        
-        resultado = promedio(listaNumeros)
-        print(f"EL RESULTADO DEL PROMEDIO ES : {resultado}")
+            
+        while True:    
+
+            try:
+                numeros = input("INGRESA LOS NÚMEROS SEPARADOS POR COMAS: ")
+                listaNumeros = [int(num) for num in numeros.split(",")]
+
+            except ValueError:
+                print("VALOR NO VALIDO")
+                continue
+            
+            resultado = promedio(listaNumeros)
+            print(f"EL RESULTADO DEL PROMEDIO ES : {resultado}")
+            break
 
         
 calculadora()
